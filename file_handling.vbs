@@ -2,13 +2,15 @@
 Sub createFile()
     Dim a As String
     'todo: get the variable short name for home in windows
-    a = "C:\Users\ashutoshsingh001\Desktop\hello.xlsx"
+    a = "C:\Users\ashutoshsingh001\Desktop\hello.txt"
 
-    Dim fs
+    Dim fs, b
     ' object creation in vba
     Set fs = CreateObject("Scripting.FileSystemObject")
-    fs.CreateTextFile a
-
+    ' creating text files .txt
+    Set b = fs.CreateTextFile(a, True)
+    b.WriteLine "Hello World"
+    b.Close
 End Sub
 
 

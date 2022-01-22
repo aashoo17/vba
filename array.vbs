@@ -2,9 +2,7 @@ Option Explicit
 
 Sub Arrays()
     Dim h(20) As Integer
-    Dim i As Integer
-    For i = 1 To 20
-        h(i) = i
+    For Each i in h
+        ' do something here
     Next
-    MsgBox h(10)
 End Sub

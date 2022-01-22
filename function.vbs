@@ -1,6 +1,7 @@
 Option Explicit
 Function FunctionProcedure()
-MsgBox "inside a function"
+    MsgBox "inside a function"
+    ' TODO: return value in procedure
 End Function
 Function FunctionWithArg(x As Integer, Optional y As Integer = 10)
     MsgBox x

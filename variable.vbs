@@ -1,4 +1,6 @@
-Option Explicit
+' [declaring variable](https://docs.microsoft.com/en-us/office/vba/language/concepts/getting-started/declaring-variables)
+
+Option Explicit     ' this statement does not allow implicit variable creation so Dim statement will be required in advance
 Sub Variable()
 ' variables in vba
 ' integers

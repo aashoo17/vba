@@ -8,5 +8,12 @@ Sub CustomTypes()
     Dim h As Human
     h.age = 20
     h.name = "Human"
-    MsgBox h.age
+
+    ' using With in custom types
+    With h
+        .age = 30
+        .name = "Some new Name"
+    End With
+    MsgBox h.name
+
 End Sub
