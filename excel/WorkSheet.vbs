@@ -16,7 +16,7 @@ Sub AddSheets()
     Dim wb As Workbook
     Dim sh As Worksheet
     Set wb = Workbooks("prac")
-    wb.Worksheets.Add , , 3
+    wb.Worksheets.Add , , 3     ' TODO: giving custom name to sheets at the time of creation
     wb.Save
 End Sub
 
