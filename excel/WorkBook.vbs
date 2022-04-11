@@ -9,7 +9,7 @@ Sub AccessAlreadyOpenedWorkbook()
     ' is Workbook name access them uniquely that is really nice
     ' this is also reason than same name excel file even if they are at different location
     ' can't be opened together (that is bad design though I must say)  
-    Set wb = Workbooks("prac")
+    Set wb = Workbooks("prac")  ' access prac.xlsx workbook
 End Sub
 
 ' Saving a workbook

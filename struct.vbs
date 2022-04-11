@@ -4,6 +4,8 @@ Type Human
     age As Integer
 End Type
 
+' TODO: create properties and methods for custom types
+
 Sub CustomTypes()
     Dim h As Human
     h.age = 20

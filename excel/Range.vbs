@@ -41,7 +41,9 @@ Sub BorderCells()
     Set wb = Workbooks("prac")
     Set sh = wb.Worksheets("Sheet1")
     ' TODO: this accesses only one side of a cell/range how can we do that for all sides in one go 
+    ' getting the Border object from Borders collection here
     With sh.Range("b2:c8").Borders(xlEdgeLeft)
+        ' after getting border object changing the properties as we like
         .LineStyle = xlContinuous
         .Weight = xlThick
         .ColorIndex = 3
