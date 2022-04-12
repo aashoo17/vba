@@ -20,7 +20,9 @@ End Sub
 ' applying visual indicators like color, background, border, font (changing and modifying size) etc 
 
 ' Border
-Sub BorderCells()
+
+' Border around a group of cells
+Sub BorderCells()   
     Application.DisplayAlerts = False
     Dim wb As Workbook
     Dim sh As Worksheet
@@ -28,11 +30,25 @@ Sub BorderCells()
     Set wb = Workbooks("prac")
     Set sh = wb.Worksheets("Sheet1")
     Set rg = sh.Range("c3:f13")
-    ' TODO: putting border around all sides of a cells
     rg.BorderAround Weight:=xlThick, ColorIndex:=3
     wb.Save
 End Sub
-
+' Border around each of the cell in a range(of cells)
+Sub BorderEachCells()
+    Application.DisplayAlerts = False
+    Dim wb As Workbook
+    Dim sh As Worksheet
+    Dim rg As Range
+    Set wb = Workbooks("prac")
+    Set sh = wb.Worksheets("Sheet1")
+    Set rg = sh.Range("c3:f13")
+    Dim cell As Variant
+    For Each cell In rg
+        cell.BorderAround Weight:=xlThick, ColorIndex:=3
+    Next
+    wb.Save
+End Sub
+' changing the border of one side in a cell
 Sub BorderCells()
     Application.DisplayAlerts = False
     Dim wb As Workbook
@@ -40,7 +56,6 @@ Sub BorderCells()
     Dim rg As Range
     Set wb = Workbooks("prac")
     Set sh = wb.Worksheets("Sheet1")
-    ' TODO: this accesses only one side of a cell/range how can we do that for all sides in one go 
     ' getting the Border object from Borders collection here
     With sh.Range("b2:c8").Borders(xlEdgeLeft)
         ' after getting border object changing the properties as we like
@@ -50,6 +65,8 @@ Sub BorderCells()
     End With
     wb.Save
 End Sub
+
+' TODO: removing the border of a cell
 
 ' BackgroundColor
 Sub BackgroundColorCells()
